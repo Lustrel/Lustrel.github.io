@@ -70,10 +70,28 @@ form button {
 .container {
     max-width: 800px;
     left: 50%;
+    padding: 20px;
     position: absolute;
     text-align: center;
     top: 50%;
+    width: 100%;
 
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 405px) {
+
+    form {
+        box-shadow: none;
+    }
+
+    form input,
+    form button {
+        border-radius: 7px; /* Resets all previous border-radius */
+        margin: 5px 0;
+        width: 100%;
+
+        box-shadow: 0 2px 2px rgba(0, 0, 0, .3);
+    }
 }
