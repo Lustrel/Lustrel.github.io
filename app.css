@@ -80,7 +80,7 @@ form button {
             transform: translate(-50%, -50%);
 }
 
-@media only screen and (max-width: 405px) {
+@media only screen and (max-width: 445px) {
 
     form {
         box-shadow: none;
