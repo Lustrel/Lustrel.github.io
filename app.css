@@ -23,16 +23,16 @@ p {
 }
 
 form {
-    border-radius: 22px;
+    border-radius: 25px;
     display: inline-block;
     margin: 30px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, .4);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, .6);
 }
 
 form input,
 form button {
     font-size: 16px;
-    height: 50px;
+    height: 51px;
     padding: 20px 35px;
     vertical-align: middle;
 }
@@ -41,12 +41,12 @@ form input {
     border: 1px solid white;
     color: #3c3c3c;
 
-    -webkit-border-top-left-radius: 22px;
-    -webkit-border-bottom-left-radius: 22px;
-       -moz-border-radius-topleft: 22px;
-       -moz-border-radius-bottomleft: 22px;
-            border-top-left-radius: 22px;
-            border-bottom-left-radius: 22px;
+    -webkit-border-top-left-radius: 25px;
+    -webkit-border-bottom-left-radius: 25px;
+       -moz-border-radius-topleft: 25px;
+       -moz-border-radius-bottomleft: 25px;
+            border-top-left-radius: 25px;
+            border-bottom-left-radius: 25px;
 }
 
 form input::-webkit-input-placeholder {
@@ -57,18 +57,23 @@ form button {
     background: #66A524;
     border: none;
     color: white;
-    padding-top: 16px;
+    padding-top: 18px;
 
-    -webkit-border-top-right-radius: 22px;
-    -webkit-border-bottom-right-radius: 22px;
-       -moz-border-radius-topright: 22px;
-       -moz-border-radius-bottomright: 22px;
-            border-top-right-radius: 22px;
-            border-bottom-right-radius: 22px;
+    -webkit-border-top-right-radius: 25px;
+    -webkit-border-bottom-right-radius: 25px;
+       -moz-border-radius-topright: 25px;
+       -moz-border-radius-bottomright: 25px;
+            border-top-right-radius: 25px;
+            border-bottom-right-radius: 25px;
 }
 
 .container {
-    margin: 0 auto;
     max-width: 800px;
+    left: 50%;
+    position: absolute;
     text-align: center;
+    top: 50%;
+
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 }
