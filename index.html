@@ -2,24 +2,16 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />    
-    <title>Lustrel - O melhor da tecnologia para sua empresa</title>
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="vendor.css"/>
-    <link rel="stylesheet" href="app.css?v=1.0.0"/>
+    <title>Lustrel | O melhor da tecnologia para sua empresa</title>
+    <link rel="stylesheet" href="dist/css/app.css"/>
+    <link rel="stylesheet" href="dist/css/vendor.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 </head>
-<body>
-    <div class="container">
-        <h2>Saindo do forno</h2>
-        <p>
-            Ansioso, né!? Que tal deixar seu e-mail conosco e receber 
-            em primeira mão um aviso informando sobre nosso lançamento?
-        </p>
+<body ng-app="AcademiaDigital">
+    <h3>Hello, World!</h3>
+    <ng-view></ng-view>
 
-        <form>
-            <input type="email" placeholder="meu-email@exemplo.com"/><!--
-            --><button type="submit"><span>Inscrever</span></button>
-        </form>
-    </div>
+    <script src="dist/js/vendor.js"></script>
+    <script src="dist/js/app.js"></script>
 </body>
 </html>
