@@ -3,11 +3,13 @@
 angular
 	.module('Lustrel', ['ngRoute'])
 	.config(function($routeProvider){
+		var pagesTemplatePath = './dist/templates/pages';
+
 		$routeProvider
 			.when('/', { 
-				templateUrl: './src/pages/home/home.template.html'
+				templateUrl: (pagesTemplatePath + '/home/home.template.html')
 			})
 			.when('/contact', {
-				templateUrl: './src/pages/contact/contact.template.html'
+				templateUrl: (pagesTemplatePath + '/contact/contact.template.html')
 			})
 	});
