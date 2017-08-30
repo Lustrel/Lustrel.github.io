@@ -27,12 +27,29 @@ module.exports = function(Grunt) {
                 dest: (distJsPath + "/app.js")
             }
         },
+        
+        // Concat CSS
+        concat_css: {
+            vendor: {
+                src: [
+                    (bowerPath + "/reset-css/reset.css"),
+                ],
+                dest: (distCssPath + "/vendor.css")
+            },
+            app: {
+                src: [
+                    (sourcePath + "/pages/home/home.style.css")
+                ],
+                dest: (distCssPath + "/app.css")
+            }
+        },
 
     });
 
     Grunt.loadNpmTasks("grunt-contrib-concat");
-
-    Grunt.registerTask("default", ["concat:app"]);
-    Grunt.registerTask("vendor", ["concat:vendor"]);
+    Grunt.loadNpmTasks("grunt-concat-css");
+    
+    Grunt.registerTask("default", ["concat:app", "concat_css:app"]);
+    Grunt.registerTask("vendor", ["concat:vendor", "concat_css:vendor"]);
     Grunt.registerTask("build", ["vendor", "default"]);
 };
