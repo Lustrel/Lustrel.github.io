@@ -38,6 +38,7 @@ module.exports = function(Grunt) {
 			},
 			app: {
 				src: [
+					(sourcePath + '/general.style.css'),
 					(sourcePath + '/pages/home/home.style.css')
 				],
 				dest: (distCssPath + '/app.css')
@@ -50,6 +51,12 @@ module.exports = function(Grunt) {
 				cwd: (sourcePath + '/pages'),
 				src: '**/*.html',
 				dest: (distPath + '/templates/pages')
+			},
+			images: {
+				expand: true,
+				cwd: (sourcePath + '/images'),
+				src: '**/*.jpeg',
+				dest: (distPath + '/images')
 			}
 		},
 	});
@@ -58,7 +65,7 @@ module.exports = function(Grunt) {
 	Grunt.loadNpmTasks('grunt-concat-css');
 	Grunt.loadNpmTasks('grunt-contrib-copy');
 
-	Grunt.registerTask('default', ['concat:app', 'concat_css:app', 'copy:pages_templates']);
+	Grunt.registerTask('default', ['concat:app', 'concat_css:app', 'copy:pages_templates', 'copy:images']);
 	Grunt.registerTask('vendor', ['concat:vendor', 'concat_css:vendor']);
 	Grunt.registerTask('build', ['vendor', 'default']);
 };

@@ -1,3 +1,17 @@
 section {
-	background: blue;
+	background:gray;
+}
+
+.banner {
+	height: 500px;
+	width: 100%;
+}
+
+.lst-section {
+	padding: 50px 25px;
+}
+
+.title-center {
+	text-align: center;
+	
 }
