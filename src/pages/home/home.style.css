@@ -9,9 +9,13 @@ section {
 
 .lst-section {
 	padding: 50px 25px;
+	text-align: center;
 }
 
-.title-center {
-	text-align: center;
-	
+.title {
+	font-size: 26px;
+}
+
+.subtitle-box {
+	font-size: 20px;
 }

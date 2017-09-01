@@ -45,6 +45,7 @@ module.exports = function(Grunt) {
 			}
 		},
 		
+		// Copy
 		copy: {
 			pages_templates: {
 				expand: true,
@@ -59,11 +60,21 @@ module.exports = function(Grunt) {
 				dest: (distPath + '/images')
 			}
 		},
+
+		// Watch
+		watch: {
+			options: {},
+			app: {
+				files: (sourcePath + "/**/*"),
+				tasks: ["default"]
+			}
+		}
 	});
 
 	Grunt.loadNpmTasks('grunt-contrib-concat');
 	Grunt.loadNpmTasks('grunt-concat-css');
 	Grunt.loadNpmTasks('grunt-contrib-copy');
+	Grunt.loadNpmTasks("grunt-contrib-watch");
 
 	Grunt.registerTask('default', ['concat:app', 'concat_css:app', 'copy:pages_templates', 'copy:images']);
 	Grunt.registerTask('vendor', ['concat:vendor', 'concat_css:vendor']);
