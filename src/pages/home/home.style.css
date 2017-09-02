@@ -7,15 +7,18 @@ section {
 	width: 100%;
 }
 
-.lst-section {
-	padding: 50px 25px;
+.title {
+	font-size: 26px;
 	text-align: center;
 }
 
-.title {
-	font-size: 26px;
+.lst-section {
+	padding: 50px 45px;
+	text-align: justify ;
 }
 
-.subtitle-box {
+
+.subtitle {
 	font-size: 20px;
+	text-align: center;
 }
