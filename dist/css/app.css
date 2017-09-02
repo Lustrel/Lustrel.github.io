@@ -1,3 +1,27 @@
+body {
+	font: 16px "Open Sans", sans-serif;
+}
 section {
-    background: blue;
+	background:gray;
+}
+
+.banner {
+	height: 500px;
+	width: 100%;
+}
+
+.title {
+	font-size: 26px;
+	text-align: center;
+}
+
+.lst-section {
+	padding: 50px 45px;
+	text-align: justify ;
+}
+
+
+.subtitle {
+	font-size: 20px;
+	text-align: center;
 }
