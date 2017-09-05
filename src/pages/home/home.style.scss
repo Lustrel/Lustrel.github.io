@@ -1,0 +1,19 @@
+.banner {
+	height: 500px;
+	width: 100%;
+}
+
+.lst-content-section {
+	background: #F8F8F8;
+	padding: 50px 45px;
+	text-align: center;
+
+	.lst-title {
+		color: #813FC2;
+		font-size: 24px;
+	}
+
+	&.-darker {
+		background: #F1F3F5;	
+	}
+}

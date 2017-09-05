@@ -35,13 +35,6 @@ module.exports = function(Grunt) {
 					(bowerPath + '/reset-css/reset.css'),
 				],
 				dest: (distCssPath + '/vendor.css')
-			},
-			app: {
-				src: [
-					(sourcePath + '/general.style.css'),
-					(sourcePath + '/pages/home/home.style.css')
-				],
-				dest: (distCssPath + '/app.css')
 			}
 		},
 		
@@ -61,6 +54,14 @@ module.exports = function(Grunt) {
 			}
 		},
 
+		// SASS
+		sass: {
+			options: { sourcemap: "none", style: "compressed", update: true },
+			app: {
+				files: { "./dist/css/app.css": "./src/style.loader.scss" }
+			}
+		},
+
 		// Watch
 		watch: {
 			options: {},
@@ -73,10 +74,11 @@ module.exports = function(Grunt) {
 
 	Grunt.loadNpmTasks('grunt-contrib-concat');
 	Grunt.loadNpmTasks('grunt-concat-css');
+	Grunt.loadNpmTasks('grunt-contrib-sass');
 	Grunt.loadNpmTasks('grunt-contrib-copy');
-	Grunt.loadNpmTasks("grunt-contrib-watch");
+	Grunt.loadNpmTasks('grunt-contrib-watch');
 
-	Grunt.registerTask('default', ['concat:app', 'concat_css:app', 'copy:pages_templates', 'copy:images']);
+	Grunt.registerTask('default', ['concat:app', 'sass:app', 'copy:pages_templates', 'copy:images']);
 	Grunt.registerTask('vendor', ['concat:vendor', 'concat_css:vendor']);
 	Grunt.registerTask('build', ['vendor', 'default']);
 };
