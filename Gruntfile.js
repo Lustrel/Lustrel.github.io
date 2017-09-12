@@ -22,7 +22,8 @@ module.exports = function(Grunt) {
 			},
 			app: {
 				src: [
-					(sourcePath + '/app.module.js')
+					(sourcePath + '/app.module.js'), 
+					(sourcePath + '/components/info-box/info-box.directive.js')
 				],
 				dest: (distJsPath + '/app.js')
 			}
@@ -45,6 +46,12 @@ module.exports = function(Grunt) {
 				cwd: (sourcePath + '/pages'),
 				src: '**/*.html',
 				dest: (distPath + '/templates/pages')
+			},
+			components_templates: {
+				expand: true,
+				cwd: (sourcePath + '/components'),
+				src: '**/*.html',
+				dest: (distPath + '/templates/components')
 			},
 			images: {
 				expand: true,
@@ -78,7 +85,7 @@ module.exports = function(Grunt) {
 	Grunt.loadNpmTasks('grunt-contrib-copy');
 	Grunt.loadNpmTasks('grunt-contrib-watch');
 
-	Grunt.registerTask('default', ['concat:app', 'sass:app', 'copy:pages_templates', 'copy:images']);
+	Grunt.registerTask('default', ['concat:app', 'sass:app', 'copy:pages_templates', 'copy:images', 'copy:components_templates']);
 	Grunt.registerTask('vendor', ['concat:vendor', 'concat_css:vendor']);
 	Grunt.registerTask('build', ['vendor', 'default']);
 };
