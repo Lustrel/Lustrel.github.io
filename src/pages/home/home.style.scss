@@ -27,8 +27,18 @@
 }
 
 .lst-info-box {
-	
+
 	.lst-title {
 		font-weight:600;
 	}
+
+	@media (min-width: 769px)
+	{
+		display: inline-block;
+		width: 30%;
+		margin: 0 15px;
+		vertical-align: top;
+	}
+	
 }
+
