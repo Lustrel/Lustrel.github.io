@@ -1,0 +1,22 @@
+.lst-content-section {
+	background: #F8F8F8;
+	padding: 50px 45px;
+	text-align: center;
+
+	> .lst-title {
+		color: #813FC2;
+		font-size: 24px;
+		margin-bottom: 35px;
+	}
+
+	.lst-content {
+		margin-bottom: 35px;
+		
+	}
+
+	&.-darker {
+		background: #F1F3F5;
+
+	}
+
+}
